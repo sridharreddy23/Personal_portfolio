@@ -92,6 +92,7 @@ section .title::after {
     padding: 0 5px;
     background: #fff;
     transform: translateX(-50%);
+    font-weight: 600;
 }
 
 
@@ -233,26 +234,32 @@ section .title::after {
 }
 
 .home .home-content .text-3 span {
-    color: crimson;
     font-weight: 500;
+    background: linear-gradient(135deg, #dc143c 0%, #ff6b9d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .home .home-content a {
     display: inline-block;
-    background: crimson;
+    background: linear-gradient(135deg, #dc143c 0%, #b01030 100%);
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 2px solid crimson;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
 }
 
 .home .home-content a:hover {
-    color: crimson;
-    background: none;
+    color: #fff;
+    background: linear-gradient(135deg, #b01030 0%, #dc143c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 20, 60, 0.4);
 }
 
 
@@ -270,7 +277,13 @@ section .title::after {
     height: 400px;
     width: 400px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.about .about-content .left img:hover {
+    transform: scale(1.02);
 }
 
 .about .about-content .right {
@@ -284,7 +297,10 @@ section .title::after {
 }
 
 .about .about-content .right .text span {
-    color: crimson;
+    background: linear-gradient(135deg, #dc143c 0%, #ff6b9d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .about .about-content .right p {
@@ -293,20 +309,23 @@ section .title::after {
 
 .about .about-content .right a {
     display: inline-block;
-    background: crimson;
+    background: linear-gradient(135deg, #dc143c 0%, #b01030 100%);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 2px solid crimson;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
 }
 
 .about .about-content .right a:hover {
-    color: crimson;
-    background: none;
+    color: #fff;
+    background: linear-gradient(135deg, #b01030 0%, #dc143c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 20, 60, 0.4);
 }
 
 
@@ -332,14 +351,18 @@ section .title::after {
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 50px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
 }
 
 .services .serv-content .card:hover {
-    background: crimson;
+    background: linear-gradient(135deg, #dc143c 0%, #b01030 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(220, 20, 60, 0.4);
 }
 
 .services .serv-content .card .box {
@@ -389,20 +412,23 @@ section .title::after {
 
 .skills .skills-content .left a {
     display: inline-block;
-    background: crimson;
+    background: linear-gradient(135deg, #dc143c 0%, #b01030 100%);
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 2px solid crimson;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
 }
 
 .skills .skills-content .left a:hover {
-    color: crimson;
-    background: none;
+    color: #fff;
+    background: linear-gradient(135deg, #b01030 0%, #dc143c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 20, 60, 0.4);
 }
 
 .skills .skills-content .right .bars {
@@ -422,10 +448,12 @@ section .title::after {
 }
 
 .skills .skills-content .right .line {
-    height: 5px;
+    height: 6px;
     width: 100%;
-    background: lightgrey;
+    background: #e0e0e0;
     position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .skills .skills-content .right .line::before {
@@ -434,27 +462,33 @@ section .title::after {
     height: 100%;
     left: 0;
     top: 0;
-    background: crimson;
+    background: linear-gradient(90deg, #dc143c 0%, #ff6b9d 100%);
+    border-radius: 10px;
+    transition: width 0.5s ease;
 }
 
-.skills-content .right .html::before {
+.skills-content .right .linux::before {
     width: 90%;
 }
 
-.skills-content .right .css::before {
-    width: 60%;
+.skills-content .right .cloud::before {
+    width: 85%;
 }
 
-.skills-content .right .js::before {
+.skills-content .right .debugging::before {
+    width: 90%;
+}
+
+.skills-content .right .scripting::before {
+    width: 85%;
+}
+
+.skills-content .right .docker::before {
     width: 80%;
 }
 
-.skills-content .right .php::before {
-    width: 50%;
-}
-
-.skills-content .right .mysql::before {
-    width: 70%;
+.skills-content .right .python::before {
+    width: 80%;
 }
 
 
@@ -581,6 +615,45 @@ section .title::after {
     color: #333;
 }
 
+.contact .contact-content .info .sub-title a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact .contact-content .info .sub-title a:hover {
+    color: crimson;
+    text-decoration: underline;
+}
+
+#form-status {
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+}
+
+#form-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#form-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+#form-status i {
+    margin-right: 8px;
+}
+
+#submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 .contact .right form .fields {
     display: flex;
 }
@@ -637,17 +710,20 @@ section .title::after {
     outline: none;
     font-size: 18px;
     font-weight: 500;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     flex-wrap: nowrap;
-    background: crimson;
+    background: linear-gradient(135deg, #dc143c 0%, #b01030 100%);
     border: 2px solid crimson;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
 }
 
 .right form .button-area button:hover {
-    color: crimson;
-    background: none;
+    color: #fff;
+    background: linear-gradient(135deg, #b01030 0%, #dc143c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 20, 60, 0.4);
 }
 
 
