@@ -1,31 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
+    <meta name="description"
+        content="P R Sridhar - Support Engineer specializing in Cloud Infrastructure, Linux Systems, and Advanced Debugging. Expert in AWS, Azure, GCP, and system troubleshooting.">
+    <meta name="keywords" content="Support Engineer, Cloud Infrastructure, Linux, Debugging, AWS, Azure, GCP, DevOps">
+    <meta name="author" content="P R Sridhar">
+    <title>P R Sridhar | Support Engineer Portfolio</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 </head>
+
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar"></div>
+
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-background-flash"></div>
+        <div class="loader-content">
+            <div class="loader-stars">★ ★ ★ ★ ★</div>
+            <div class="loader-logo">PRS<span>.</span></div>
+            <div class="loader-subtitle">PORTFOLIO</div>
+            <div class="loader-text">LOADING INFRASTRUCTURE...</div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+            <div class="loader-percentage">0%</div>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Floating Social Buttons -->
+    <div class="floating-social">
+        <a href="https://www.linkedin.com/in/sridh116/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/sridharreddy23" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:sridharsri13579@gmail.com" title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="tel:+919629850963" title="Phone">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
+            <div class="logo"><a href="#">PRS<span>.</span></a></div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#services" class="menu-btn">Services</a></li>
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
+                <li><a href="#projects" class="menu-btn">Projects</a></li>
+                <li><a href="#terminal" class="menu-btn">Terminal</a></li>
+                <li><a href="#experience" class="menu-btn">Experience</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
             <div class="menu-btn">
@@ -38,10 +99,10 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
+                <div class="text-1">Building Resilient Infrastructure</div>
                 <div class="text-2">P R Sridhar</div>
-                <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="Sridhar_resume.pdf" download>Download Resume</a>
+                <div class="text-3">I'm a <span class="typing"></span></div>
+                <a href="#contact">Let's Connect</a>
             </div>
         </div>
     </section>
@@ -49,15 +110,23 @@
     <!-- about section start -->
     <section class="about" id="about">
         <div class="max-width">
-            <h2 class="title">About me</h2>
+            <h2 class="title">Professional Profile</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="images/profile-1.jpeg" alt="">
+                    <div class="gta-profile-container">
+                        <img src="images/gta_avatar.png" alt="GTA Style Avatar" class="gta-profile-pic">
+                        <div class="gta-border"></div>
+                    </div>
                 </div>
                 <div class="column right">
-                    <div class="text">I'm P R Sridhar and I'm a <span class="typing-2"></span></div>
-                    <p>Hello! I'm a <b>Support Engineer</b> with expertise in <b>Cloud Infrastructure, Linux Systems, and Debugging.</b> I specialize in troubleshooting complex technical issues, maintaining cloud environments, and ensuring system reliability. With deep knowledge of Linux administration, cloud platforms, and debugging methodologies, I help organizations resolve critical issues and optimize their infrastructure.</p>
-                    <a href="https://github.com/sridharreddy23" target="_blank">View My GitHub</a>
+                    <div class="text">I'm P R Sridhar</div>
+                    <p>I am a results-driven <b>Support Engineer</b> and <b>Cloud Infrastructure Specialist</b>
+                        dedicated to ensuring system reliability and performance. With deep expertise in <b>Linux
+                            administration</b>, <b>cloud platforms (AWS, Azure, GCP)</b>, and <b>advanced
+                            troubleshooting</b>, I bridge the gap between development and operations. My focus is on
+                        building scalable, secure, and automated infrastructure that empowers businesses to innovate
+                        without downtime.</p>
+                    <a href="https://github.com/sridharreddy23" target="_blank">View GitHub Profile</a>
                 </div>
             </div>
         </div>
@@ -66,94 +135,326 @@
     <!-- services section start -->
     <section class="services" id="services">
         <div class="max-width">
-            <h2 class="title">My Interests</h2>
+            <h2 class="title">Core Competencies</h2>
             <div class="serv-content">
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-cloud"></i>
-                        <div class="text">Cloud Support & Infrastructure</div>
-                        <p>Expert in managing and troubleshooting cloud environments on AWS, Azure, and GCP. Ensuring high availability, performance optimization, and resolving cloud-related issues.</p>
+                        <div class="text">Cloud Infrastructure</div>
+                        <p>Designing and maintaining robust cloud environments on AWS, Azure, and GCP. Expertise in IAM,
+                            VPC, EC2, and serverless architectures.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <i class="fab fa-linux"></i>
-                        <div class="text">Linux Systems Expertise</div>
-                        <p>Deep knowledge of Linux administration, system configuration, performance tuning, and troubleshooting. Proficient in various Linux distributions and shell scripting.</p>
+                        <div class="text">Linux Engineering</div>
+                        <p>Comprehensive system administration, kernel tuning, and security hardening. Proficient in
+                            RHEL, Ubuntu, and shell scripting automation.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-bug"></i>
-                        <div class="text">Advanced Debugging</div>
-                        <p>Specialized in diagnosing complex technical issues, analyzing logs, tracing system behavior, and implementing effective solutions to resolve critical problems.</p>
+                        <div class="text">Observability & SRE</div>
+                        <p>Implementing proactive monitoring, logging, and alerting strategies. Root cause analysis and
+                            incident management to minimize MTTR.</p>
                     </div>
                 </div>
-               </div>
             </div>
         </div>
     </section>
 
-    <!-- skills section start -->
+    <!-- skills section start - GTA 6 Style -->
     <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">My skills</h2>
-            <div class="skills-content">
-                <div class="column left">
-                    <div class="text">My technical skills & experiences.</div>
-                    <p>As a Support Engineer, I bring expertise in <b>Cloud Infrastructure, Linux Systems Administration, and Advanced Debugging.</b> I excel at diagnosing and resolving complex technical issues, managing cloud environments (AWS, Azure, GCP), and ensuring system reliability. My strong foundation in Linux, scripting, and troubleshooting enables me to quickly identify root causes and implement effective solutions.</p>
-                    <a href="Sridhar_resume.pdf" download>Download Resume</a>
+            <h2 class="title">Technical Proficiency</h2>
+            <div class="skills-intro">
+                <p class="tagline">Engineering Reliability at Scale</p>
+                <p class="description">Leveraging a comprehensive toolkit of modern technologies to build, maintain, and
+                    optimize mission-critical infrastructure.</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill Card 1 -->
+                <div class="skill-card" data-skill="linux">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <div class="skill-header">
+                            <h3 class="skill-name">Linux Mastery</h3>
+                            <div class="skill-level">
+                                <span class="level-badge">EXPERT</span>
+                                <span class="level-number">90%</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Deep in the terminal, where commands flow like second nature. From kernel
+                            debugging to system optimization, Linux is my playground.</p>
+                        <div class="skill-tags">
+                            <span>Ubuntu</span>
+                            <span>RHEL</span>
+                            <span>Bash</span>
+                            <span>SystemD</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="column right">
-                    <div class="bars">
-                        <div class="info">
-                            <span>Linux Systems Administration</span>
-                            <span>90%</span>
+
+                <!-- Skill Card 2 -->
+                <div class="skill-card" data-skill="cloud">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="fas fa-cloud"></i>
                         </div>
-                        <div class="line linux"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Cloud Platforms (AWS/Azure/GCP)</span>
-                            <span>85%</span>
+                        <div class="skill-header">
+                            <h3 class="skill-name">Cloud Architect</h3>
+                            <div class="skill-level">
+                                <span class="level-badge">EXPERT</span>
+                                <span class="level-number">85%</span>
+                            </div>
                         </div>
-                        <div class="line cloud"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Debugging & Troubleshooting</span>
-                            <span>90%</span>
+                        <p class="skill-desc">Navigating the vast expanse of AWS, Azure, and GCP. Building scalable
+                            infrastructure that stands the test of time and traffic.</p>
+                        <div class="skill-tags">
+                            <span>AWS</span>
+                            <span>Azure</span>
+                            <span>GCP</span>
+                            <span>Terraform</span>
                         </div>
-                        <div class="line debugging"></div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Shell Scripting & Automation</span>
-                            <span>85%</span>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="skill-card" data-skill="debug">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="fas fa-bug"></i>
                         </div>
-                        <div class="line scripting"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>Docker & Containerization</span>
-                            <span>80%</span>
+                        <div class="skill-header">
+                            <h3 class="skill-name">Debug Detective</h3>
+                            <div class="skill-level">
+                                <span class="level-badge">MASTER</span>
+                                <span class="level-number">90%</span>
+                            </div>
                         </div>
-                        <div class="line docker"></div>
+                        <p class="skill-desc">When systems fail, I thrive. Tracing through logs, analyzing patterns, and
+                            uncovering the root cause of even the most elusive bugs.</p>
+                        <div class="skill-tags">
+                            <span>GDB</span>
+                            <span>Strace</span>
+                            <span>Wireshark</span>
+                            <span>Logs</span>
+                        </div>
                     </div>
-                    <div class="bars">
-                        <div class="info">
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="skill-card" data-skill="automation">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="skill-header">
+                            <h3 class="skill-name">Automation Expert</h3>
+                            <div class="skill-level">
+                                <span class="level-badge">EXPERT</span>
+                                <span class="level-number">85%</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Why do manually what can be automated? Scripting solutions that save
+                            hours, prevent errors, and scale effortlessly.</p>
+                        <div class="skill-tags">
                             <span>Python</span>
-                            <span>80%</span>
+                            <span>Bash</span>
+                            <span>Ansible</span>
+                            <span>CI/CD</span>
                         </div>
-                        <div class="line python"></div>
                     </div>
+                </div>
+
+                <!-- Skill Card 5 -->
+                <div class="skill-card" data-skill="docker">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="fab fa-docker"></i>
+                        </div>
+                        <div class="skill-header">
+                            <h3 class="skill-name">Container Specialist</h3>
+                            <div class="skill-level">
+                                <span class="level-badge">ADVANCED</span>
+                                <span class="level-number">80%</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Containerization is the future. Orchestrating Docker and Kubernetes
+                            deployments that are portable, scalable, and resilient.</p>
+                        <div class="skill-tags">
+                            <span>Docker</span>
+                            <span>K8s</span>
+                            <span>Compose</span>
+                            <span>Registry</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 6 -->
+                <div class="skill-card" data-skill="monitoring">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="skill-header">
+                            <h3 class="skill-name">Monitoring Guru</h3>
+                            <div class="skill-level">
+                                <span class="level-badge">ADVANCED</span>
+                                <span class="level-number">80%</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Keeping watch over infrastructure 24/7. Setting up alerts, dashboards, and
+                            metrics that catch issues before users do.</p>
+                        <div class="skill-tags">
+                            <span>Prometheus</span>
+                            <span>Grafana</span>
+                            <span>ELK</span>
+                            <span>Datadog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-cta">
+                <a href="Sridhar_resume.pdf" download class="resume-btn">
+                    <i class="fas fa-download"></i>
+                    Download Full Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- projects section start -->
+    <section class="projects" id="projects">
+        <div class="max-width">
+            <h2 class="title">Mission Log</h2>
+            <div class="projects-carousel">
+                <div class="card">
+                    <div class="box">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+                            alt="">
+                        <div class="text">Zero-Latency Live Stream</div>
+                        <p>Leveraged AWS MediaLive & MediaConnect alongside ffmpeg to orchestrate ultra‑low‑latency live
+                            streams for high‑profile events, ensuring seamless delivery at scale.</p>
+                        <div class="stats">
+                            <span><i class="fas fa-chart-line"></i> 99.999% Uptime</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Command Line & Bash Expert Card -->
+                <div class="card">
+                    <div class="box">
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2069&auto=format&fit=crop"
+                            alt="">
+                        <div class="text">Command Line & Bash Expert</div>
+                        <p>Command‑line specialist proficient in Bash scripting, ffmpeg automation, and rapid bug
+                            triage. Provides actionable workarounds and escalates critical issues to dev teams.</p>
+                        <div class="stats">
+                            <span><i class="fas fa-terminal"></i> Command‑Line Mastery</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2069&auto=format&fit=crop"
+                            alt="">
+                        <div class="text">Rapid Response Scripts</div>
+                        <p>Custom Bash/Python toolkit for automated log parsing and error detection. Solves issues
+                            faster than 90% of peers.</p>
+                        <div class="stats">
+                            <span><i class="fas fa-bolt"></i> 90% Faster Resolution</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- terminal demo section start -->
+    <section class="terminal-section" id="terminal">
+        <div class="max-width">
+            <h2 class="title">Command Line Mastery</h2>
+            <p class="terminal-intro">Watch me work. This is where the magic happens.</p>
+
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <div class="terminal-title">sridhar@amagi-cloud:~</div>
+                </div>
+
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-output" id="terminal-output">
+                        <div class="welcome-msg">
+                            <span class="neon-text">Welcome to PRS Terminal v1.0</span><br>
+                            <span class="dim-text">Type 'help' for available commands or try the demo</span>
+                        </div>
+                    </div>
+
+                    <div class="terminal-input-line">
+                        <span class="prompt">sridhar@amagi-cloud:~$</span>
+                        <input type="text" id="terminal-input" class="terminal-input" autocomplete="off"
+                            spellcheck="false">
+                    </div>
+                </div>
+
+                <div class="terminal-footer">
+                    <button class="demo-btn" id="run-demo">Run Demo</button>
+                    <button class="clear-btn" id="clear-terminal">Clear</button>
                 </div>
             </div>
         </div>
     </section>
 
-   
-    
+    <!-- experience section start -->
+    <section class="experience" id="experience">
+        <div class="max-width">
+            <h2 class="title">Career Progression</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="date">Oct 2025 - Present</div>
+                        <h3>Senior Support Engineer</h3>
+                        <h4>Amagi Media Labs</h4>
+                        <p>Commanding the reliability of mission-critical broadcast infrastructure. Leading incident
+                            response for tier-1 clients and mentoring the next generation of cloud guardians.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="date">Nov 2024 - Oct 2025</div>
+                        <h3>L2 Support Engineer</h3>
+                        <h4>Amagi Media Labs</h4>
+                        <p>Promoted for exceptional creativity and technical prowess. Served as the escalation point for
+                            complex cloud outages and mastered distributed system debugging.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="date">Jan 2024 - Nov 2024</div>
+                        <h3>L1 Support Engineer</h3>
+                        <h4>Amagi Media Labs</h4>
+                        <p>The first line of defense. Rapidly absorbed the Amagi ecosystem, setting new records for SLA
+                            compliance and customer satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- contact section start -->
     <section class="contact" id="contact">
@@ -168,9 +469,10 @@
                             <i class="fab fa-linkedin"></i>
                             <div class="info">
                                 <div class="head">LinkedIn Profile</div>
-                                <div class="sub-title"><a href="https://www.linkedin.com/in/sridh116/" target="_blank">sridh116</a></div>
+                                <div class="sub-title"><a href="https://www.linkedin.com/in/sridh116/"
+                                        target="_blank">sridh116</a></div>
                             </div>
-                        </div>  
+                        </div>
                         <div class="row">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="info">
@@ -186,16 +488,16 @@
                             </div>
                         </div>
                         <div class="row">
-                        <i class="fas fa-phone"></i>
-                        <div class="info">
-                        <div class="head">PhoneNumber</div>
-                        <div class="sub-title">+91 9629850963</div>
+                            <i class="fas fa-phone"></i>
+                            <div class="info">
+                                <div class="head">PhoneNumber</div>
+                                <div class="sub-title">+91 9629850963</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-                </div>
-                
-                
+
+
                 <div class="column right">
                     <div class="text">Message me</div>
                     <form id="contact-form">
@@ -211,7 +513,8 @@
                             <input type="text" name="subject" id="subject" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" name="message" id="message" placeholder="Message.." required></textarea>
+                            <textarea cols="30" rows="10" name="message" id="message" placeholder="Message.."
+                                required></textarea>
                         </div>
                         <div class="button-area">
                             <button type="submit" id="submit-btn">Send message</button>
@@ -230,4 +533,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
